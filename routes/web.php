@@ -11,4 +11,20 @@
 |
 */
 
+// トップ
 Route::get('/', 'PostsController@index');
+// 作成画面
+Route::get('/posts/create', 'PostsController@create');
+// 詳細画面
+Route::get('/posts/show/{post}', 'PostsController@show');
+// 編集
+Route::get('/posts/edit/{post}', 'PostsController@edit');
+
+
+// 保存
+Route::post('/posts/store', 'PostsController@store');
+// 更新
+Route::post('/posts/update/{post}', 'PostsController@update');
+// 削除
+Route::post('/posts/destroy/{post}', 'PostsController@destroy');
+
