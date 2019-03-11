@@ -28,3 +28,11 @@ Route::post('/posts/update/{post}', 'PostsController@update');
 // 削除
 Route::post('/posts/destroy/{post}', 'PostsController@destroy');
 
+// comments
+// 保存
+Route::post('/comments/store', 'CommentsController@store');
+// 削除
+Route::post('/comments/destory/{comment}', 'CommentsController@destory');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

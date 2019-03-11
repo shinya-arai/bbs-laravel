@@ -12,6 +12,10 @@
                 <div class="description">
                     <p>{{ $post->body }}</p>
                 </div>
+                <div class="ui label" style="margin-top: 1em;">
+                    <i class="comment alternate outline icon"></i>
+                    {{ $post->comments()->count() }}
+                </div>
             </div>
         </div>
     @endforeach
